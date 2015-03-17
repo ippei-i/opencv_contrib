@@ -1401,7 +1401,7 @@ static double NFA(int n, int k, double p, double logNT)
     double tolerance = 0.1;       /* an error of 10% in the result is accepted */
     double log1term,term,bin_term,mult_term,bin_tail,err,p_term;
     int i;
-
+#undef min
     if (p<=0)
         p = std::numeric_limits<double>::min();
     if (p>=1)
